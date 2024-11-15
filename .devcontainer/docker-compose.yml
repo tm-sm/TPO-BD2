@@ -6,11 +6,7 @@ services:
     volumes:
       - ..:/workspace:cached
     command: sleep infinity
-    ports:
-      - 27017:27017 # MongoDB
-      - 7474:7474   # Neo4j (HTTP)
-      - 7687:7687   # Neo4j (Bolt)
-      - 6379:6379   # Redis
+
 
   mongodb:
     image: mongo
@@ -27,16 +23,8 @@ services:
       - 7474:7474
       - 7687:7687
     environment:
-      NEO4J_AUTH: "neo4j/test"
-
-  redis:
-    image: redis
-    container_name: redis
-    ports:
-      - 6379:6379
-    volumes:
-      - redis_data:/data
+      NEO4J_AUTH: none
 
 volumes:
   mongodb_data:
-  redis_data:
+  neo4j_data:
