@@ -1,0 +1,9 @@
+{
+  "name": "Database Development Environment",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "extensions": [
+    "ms-azuretools.vscode-docker"
+  ]
+}
