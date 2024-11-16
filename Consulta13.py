@@ -31,7 +31,7 @@ elif args.m:
             exit()
         direccion=args.direccion if args.direccion else client_result['direccion']
         activo=args.activo if args.activo else client_result['activo']
-        db.Clientes.update_one({"nro_cliente":args.nro_cliente},{"$set":{"direccion":activo,"activo":activo}})
+        db.Clientes.update_one({"nro_cliente":args.nro_cliente},{"$set":{"direccion":direccion,"activo":activo}})
 elif args.e:
         db.Clientes.delete_one({"nro_cliente":args.nro_cliente})
 
