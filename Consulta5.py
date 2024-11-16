@@ -1,3 +1,7 @@
+from pymongo import MongoClient
+from neo4j import GraphDatabase
+
+
 client = MongoClient("mongodb://localhost:27017/")  
 db = client['Negocio']
 collection = db['Clientes']
