@@ -17,7 +17,7 @@ for client in clients:
     return f
     """
     neo_query_result=session.run(query,nro_cliente=client['nro_cliente'])
-    if neo_query_result:
+    if neo_query_result.peek() is not None:
         result.append(client)
 for client in result:
     print(client)
