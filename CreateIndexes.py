@@ -10,3 +10,9 @@ with driver.session() as session:
     FOR (p:producto_no_facturado) 
     ON (p.codigo_producto);
     """)
+
+    session.run("""
+    CREATE INDEX IF NOT EXISTS 
+    FOR (f:Factura)
+    ON (f.fecha);   
+    """)

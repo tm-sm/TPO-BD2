@@ -19,7 +19,6 @@ query = """
     """
 
 neo_query_result = session.run(query)
-"codigo_producto","marca","nombre","descripcion","precio","stock"
 
 print(f"{'codigo'.ljust(10)} | {'marca'.ljust(12)} | {'nombre'.ljust(10)} | {'descripcion'.ljust(20)} | {'precio'.ljust(15)} | {'stock'.ljust(15)}")
 print("--------------------------------------------------------------------------")
