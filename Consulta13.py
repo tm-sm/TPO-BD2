@@ -21,12 +21,17 @@ parser.add_argument("--activo", type=int,  help="Activo de Cliente")
 
 args=parser.parse_args()
 
-
 if args.a:
         collection.insert_one({"nro_cliente":args.nro_cliente,"nombre":args.nombre,
                             "apellido":args.apellido,"direccion":args.direccion,"activo":args.activo})
 elif args.m:
-        collection.update_one({"nro_cliente":args.nro_cliente},{"$set":{"direccion":args.direccion}})
+        client_result=db.Clientes.find_one({"nro_cliente": args.nro_cliente})
+        if client_result is None:
+            print("No se encuentra el numero de cliente especificado")
+            exit()
+        direccion=args.direccion if args.direccion else client_result['direccion']
+        activo=args.activo if args.activo else client_result['activo']
+        db.Clientes.update_one({"nro_cliente":args.nro_cliente},{"$set":{"direccion":activo,"activo":activo}})
 elif args.e:
-        collection.delete_one({"nro_cliente":args.nro_cliente})
+        db.Clientes.delete_one({"nro_cliente":args.nro_cliente})
 
