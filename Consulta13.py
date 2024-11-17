@@ -8,16 +8,16 @@ collection = db['Clientes']
 
 parser = argparse.ArgumentParser(description="Add a client to Neo4j.")
 operation = parser.add_mutually_exclusive_group(required=True)
-operation.add_argument("--a","--agregar",action="store_true", help="Agrega un cliente")
-operation.add_argument("--m","--modificar",action="store_true", help="Modifica un cliente")
-operation.add_argument("--e","--eliminar",action="store_true", help="Elimina un cliente")
+operation.add_argument("-a","-agregar",action="store_true", help="Agrega un cliente")
+operation.add_argument("-m","-modificar",action="store_true", help="Modifica un cliente")
+operation.add_argument("-e","-eliminar",action="store_true", help="Elimina un cliente")
 
 
-parser.add_argument("--nro_cliente", type=int, required=True, help="Numero de Cliente")
-parser.add_argument("--nombre", type=str, help="Nombre Cliente")
-parser.add_argument("--apellido", type=str, help="Apellido Cliente")
-parser.add_argument("--direccion", type=str, help="Direccion del Cliente")
-parser.add_argument("--activo", type=int,  help="Activo de Cliente")
+parser.add_argument("-nro_cliente", type=int, required=True, help="Numero de Cliente")
+parser.add_argument("-nombre", type=str, help="Nombre Cliente")
+parser.add_argument("-apellido", type=str, help="Apellido Cliente")
+parser.add_argument("-direccion", type=str, help="Direccion del Cliente")
+parser.add_argument("-activo", type=int,  help="Activo de Cliente")
 
 args=parser.parse_args()
 
