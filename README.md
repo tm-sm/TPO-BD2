@@ -76,6 +76,41 @@ Para ejecutar cualquier script de consulta:
    ```
    Reemplaza `ConsultaX.py` con el nombre del script de consulta que deseas ejecutar.
 
+   Para las consultas 13 y 14 que contienen operaciones de escrituras, se requieren parametros de entrada. Para ambos se necesita especificar una de las siguientes:
+   
+- -a, -agregar: Indica que se debe agregar los parametros indicados de la base de datos
+- -m, -modificar: Indica que se debe modificar los parametros indicados de la base de datos
+- -e, -eliminar: Indica que se debe eliminar los parametros indicados de la base de datos (no disponible para los productos))
+   
+Luego, cada consulta pueden recibir parametros especificos a sus dominios.
+
+###  Consulta13
+- -nro_cliente: Numero del cliente. Requerido para la ejecucion.
+- -nombre: Nombre del cliente.
+- -apellido: Apellido del cliente.
+- -direccion: Direccion del cliente.
+- -activo: Indica el campo activo del cliente.
+- -telefono: Telefono del cliente.
+- -tipo: Tipo del telefono del cliente.
+- -codigo_area: Codigo de area del telefono del cliente  
+
+Por ejemplo, se puede agregar un cliente de la siguiente forma:
+``` bash
+python3 Consulta13.py -a -nro_cliente 116 -nombre NOMBRECLIENTE -apellido APELLIDOCLIENTE -direccion DIRECCIONCLIENTE -activo 1 -telefono 11547325 -tipo M -codigo_area 11
+```
+
+### Consulta 14
+- -desc: Descripcion del producto
+- -stock: Stock del producto
+- -precio: Precio del producto
+- -marca: Marca del producto
+- -nombre: Nombre del producto
+- -codigo: Codigo del producto 
+
+Siguiendo el ejemplo anterior, se puede agregar un producto de la siguiente forma:
+```bash 
+python3 Consulta14.py -a -codigo 104 -marca MARCAPRODUCTO -nombre NOMBREPRODUCTO -precio 1400.6 -desc DESCRIPCIONPRODUCTO -stock 4
+```
 ---
 
 ## **Resolución de Problemas**
