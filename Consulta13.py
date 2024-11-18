@@ -2,7 +2,7 @@ from pymongo import MongoClient
 import pandas as pd
 import argparse
 
-client = MongoClient("mongodb://localhost:27017/")  
+client = MongoClient("mongodb://mongo:27017/")  
 db = client['Negocio']
 collection = db['Clientes']
 

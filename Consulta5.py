@@ -2,11 +2,11 @@ from pymongo import MongoClient
 from neo4j import GraphDatabase
 
 
-client = MongoClient("mongodb://localhost:27017/")  
+client = MongoClient("mongodb://mongo:27017/")  
 db = client['Negocio']
 collection = db['Clientes']
 
-driver=GraphDatabase.driver(uri="bolt://localhost:7687")   
+driver=GraphDatabase.driver(uri="bolt://neo4j:7687")   
 session=driver.session()
 
 clients= list(db.Clientes.find({},{"_id":0}))

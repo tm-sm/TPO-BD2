@@ -62,7 +62,7 @@ MERGE (df)-[:REFERS_TO]->(p);
 
 # Main script
 if __name__ == "__main__":
-    URI = "neo4j://localhost:7687"
+    URI = "bolt://neo4j:7687"
     importer = Neo4jImporter(URI)
 
     try:

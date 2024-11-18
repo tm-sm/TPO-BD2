@@ -1,7 +1,7 @@
 from neo4j import GraphDatabase
 
 
-driver = GraphDatabase.driver(uri="bolt://localhost:7687")   
+driver = GraphDatabase.driver(uri="bolt://neo4j:7687")   
 session = driver.session()
 
 # Update the label
