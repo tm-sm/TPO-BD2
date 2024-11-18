@@ -24,3 +24,5 @@ df = pd.DataFrame(result)
 df['telefonos'] = df['telefonos'].apply(lambda x: [f"{item['codigo_area']}-{item['nro_telefono']}" for item in x] if isinstance(x, list) else [])
 
 df = df[['nombre', 'apellido', 'telefonos']]
+for result in df.values:
+    print(result)
