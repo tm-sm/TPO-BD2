@@ -35,4 +35,5 @@ cliente_df = df['cliente'].apply(pd.Series)
 df = pd.concat([df, cliente_df], axis=1)
 
 df = df[['telefono', 'nombre', 'apellido', 'direccion', 'activo']]
-
+for result in df.values:
+    print(result)
