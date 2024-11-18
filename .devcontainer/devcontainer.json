@@ -4,6 +4,8 @@
   "service": "app",
   "workspaceFolder": "/workspace",
   "extensions": [
-    "ms-azuretools.vscode-docker"
-  ]
+    "ms-azuretools.vscode-docker",
+    "ms-python.python"
+  ],
+  "postCreateCommand": "if ! command -v pip3 &> /dev/null; then sudo apt update && sudo apt install -y python3-pip; fi && pip3 install -r requirements.txt"
 }
