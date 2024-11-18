@@ -72,7 +72,6 @@ if __name__ == "__main__":
 
         importer.import_csv("Data/e01_detalle_factura.csv", DETALLE_FACTURA_QUERY)
         importer.driver.session().run("CREATE CONSTRAINT FOR (p:Producto) REQUIRE p.codigo_producto IS UNIQUE;")
-        importer.driver.session().run("CREATE CONSTRAINT FOR (df:DetalleFactura) REQUIRE df.codigo_producto IS UNIQUE;")
 
         print("Data import completed successfully.")
     except Exception as e:
