@@ -9,22 +9,6 @@ Cálculo de facturación: Determinar el monto total de la factura, incluyendo el
 
 El desarrollo integra el uso de bases de datos NoSQL, MongoDB y Neo4j, para almacenar y consultar los datos necesarios de manera eficiente. Las consultas y operaciones se implementaron utilizando Python y sus bibliotecas especializadas, lo que permite centralizar el manejo de datos y garantizar un funcionamiento confiable del sistema.
 
----
-
-## **Requisitos de Instalación**
-Para ejecutar este proyecto, asegúrate de tener instalados los siguientes componentes:
-
-- **Python 3**: Lenguaje de programación utilizado.
-- **Librerías de Python**:
-  - `neo4j`
-  - `pymongo` (librería para MongoDB)
-  - `pandas`
-- **Bases de datos**:
-  - **Neo4j**
-  - **MongoDB**
-- **Docker**: Para manejar los entornos de las bases de datos mediante contenedores.
-
----
 
 ## **Instrucciones de Configuración**
 1. Clona el repositorio del proyecto:
@@ -48,7 +32,6 @@ Para ejecutar este proyecto, asegúrate de tener instalados los siguientes compo
    ```bash
    pip install -r requirements.txt
    ```
-   *(Asegúrate de tener un archivo `requirements.txt` con las librerías necesarias, como `neo4j`, `pymongo` y `pandas`.)*
 
 ---
 
@@ -111,12 +94,4 @@ Siguiendo el ejemplo anterior, se puede agregar un producto de la siguiente form
 ```bash 
 python3 Consulta14.py -a -codigo 104 -marca MARCAPRODUCTO -nombre NOMBREPRODUCTO -precio 1400.6 -desc DESCRIPCIONPRODUCTO -stock 4
 ```
----
 
-## **Resolución de Problemas**
-- Asegúrate de que los contenedores de **MongoDB** y **Neo4j** estén en ejecución:
-  - Usa `docker ps` para verificar los contenedores activos.
-  - Revisa los logs de `docker-compose` para confirmar que no haya errores en la configuración.
-- Si un script falla, verifica que los datos hayan sido importados correctamente en las bases de datos.
-
----
