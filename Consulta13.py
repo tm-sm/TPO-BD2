@@ -29,7 +29,7 @@ if args.a:
         db.Telefonos.insert_one({"nro_cliente":args.nro_cliente,"codigo_area":args.codigo_area,"tipo":args.tipo,"nro_telefono":args.telefono})
 elif args.m:
         client_result=db.Clientes.find_one({"nro_cliente": args.nro_cliente})
-        telephone_result=db.Telefono.find_one({"nro_cliente":args.nro_cliente})
+        telephone_result=db.Telefonos.find_one({"nro_cliente":args.nro_cliente})
         if client_result is None:
             print("No se encuentra el numero de cliente especificado")
             exit()
