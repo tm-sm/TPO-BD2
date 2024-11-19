@@ -81,7 +81,7 @@ Por ejemplo, se puede agregar un cliente de la siguiente forma:
 ``` bash
 python3 Consulta13.py -a -nro_cliente 116 -nombre NOMBRECLIENTE -apellido APELLIDOCLIENTE -direccion DIRECCIONCLIENTE -activo 1 -telefono 11547325 -tipo M -codigo_area 11
 ```
-Para la modificacion, el script solo tomara los parametros de direccion, telefono, activo, tipo y codigo de area.
+Para la modificacion, el script solo toma los parametros de direccion, telefono, activo, tipo y codigo de area.
 
 ### Consulta 14
 - -desc: Descripcion del producto
@@ -95,5 +95,5 @@ Siguiendo el ejemplo anterior, se puede agregar un producto de la siguiente form
 ```bash 
 python3 Consulta14.py -a -codigo 104 -marca MARCAPRODUCTO -nombre NOMBREPRODUCTO -precio 1400.6 -desc DESCRIPCIONPRODUCTO -stock 4
 ```
-Para la modificacion, el script solo tomaara los parametros de stock, precio y descripcion.
+Para la modificacion, el script solo toma los parametros de stock, precio y descripcion.
 
