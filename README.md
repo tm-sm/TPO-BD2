@@ -1,13 +1,7 @@
 # TPO-BD2
 
 ## Descripción del Proyecto
-Este proyecto, desarrollado como parte de un Trabajo Práctico, tiene como objetivo la implementación de un sistema de facturación para gestionar el control de productos comprados por los clientes. El sistema debe cumplir con las siguientes funcionalidades esenciales:
-
-Gestión del stock: Verificar la disponibilidad de los productos antes de procesar la venta.
-Actualización de inventario: Reducir la cantidad en stock de los productos vendidos.
-Cálculo de facturación: Determinar el monto total de la factura, incluyendo el IVA y los descuentos aplicables según el volumen de productos adquiridos.
-
-El desarrollo integra el uso de bases de datos NoSQL, MongoDB y Neo4j, para almacenar y consultar los datos necesarios de manera eficiente. Las consultas y operaciones se implementaron utilizando Python y sus bibliotecas especializadas, lo que permite centralizar el manejo de datos y garantizar un funcionamiento confiable del sistema.
+Este proyecto tiene como objetivo la implementación de un sistema de facturación para gestionar el control de productos comprados por los clientes a través de bases de datos NoSQL. 
 
 ## **Instruciones de uso** ##
 
