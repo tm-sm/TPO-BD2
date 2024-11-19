@@ -26,7 +26,7 @@ args=parser.parse_args()
 if args.a:
         collection.insert_one({"nro_cliente":args.nro_cliente,"nombre":args.nombre,
                             "apellido":args.apellido,"direccion":args.direccion,"activo":args.activo})
-        db.Telefono.insert_one({"nro_cliente":args.nro_cliente,"codigo_area":args.codigo_area,"tipo":args.tipo,"nro_telefono":args.telefono})
+        db.Telefonos.insert_one({"nro_cliente":args.nro_cliente,"codigo_area":args.codigo_area,"tipo":args.tipo,"nro_telefono":args.telefono})
 elif args.m:
         client_result=db.Clientes.find_one({"nro_cliente": args.nro_cliente})
         telephone_result=db.Telefono.find_one({"nro_cliente":args.nro_cliente})
@@ -39,7 +39,7 @@ elif args.m:
         tipo=args.tipo if args.tipo else telephone_result['tipo']
         codigo_area=args.codigo_area if args.codigo_area else telephone_result['codigo_area']
         db.Clientes.update_one({"nro_cliente":args.nro_cliente},{"$set":{"direccion":direccion,"activo":activo}})
-        db.Telefono.update_one({"nro_cliente":args.nro_cliente},{"$set":{"codigo_area":codigo_area,"nro_telefono":telefono,"tipo":tipo}})
+        db.Telefonos.update_one({"nro_cliente":args.nro_cliente},{"$set":{"codigo_area":codigo_area,"nro_telefono":telefono,"tipo":tipo}})
 elif args.e:
         db.Clientes.delete_one({"nro_cliente":args.nro_cliente})
-        db.Telefono.delete_one({"nro_cliente":args.nro_cliente})
+        db.Telefonos.delete_one({"nro_cliente":args.nro_cliente})
