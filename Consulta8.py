@@ -29,7 +29,7 @@ class ProductQuery:
                 for record in results
             ]
 
-URI = "neo4j://localhost:7687"
+URI = "bolt://neo4j:7687"
 USERNAME = "neo4j"
 PASSWORD = "test"
 
