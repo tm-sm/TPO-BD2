@@ -9,8 +9,14 @@ Cálculo de facturación: Determinar el monto total de la factura, incluyendo el
 
 El desarrollo integra el uso de bases de datos NoSQL, MongoDB y Neo4j, para almacenar y consultar los datos necesarios de manera eficiente. Las consultas y operaciones se implementaron utilizando Python y sus bibliotecas especializadas, lo que permite centralizar el manejo de datos y garantizar un funcionamiento confiable del sistema.
 
+## **Instruciones de uso** ##
 
-## **Instrucciones de Configuración**
+### **Codespaces** ###
+1. Ingresar a [Codespaces](https://codespaces.new/tm-sm/TPO-BD2)
+2. Esperar a que se terminen de instalar las bases de datos y requisitos
+
+
+### **Local** ###
 1. Clona el repositorio del proyecto:
    ```bash
    git clone https://github.com/tm-sm/TPO-BD2.git
@@ -35,17 +41,22 @@ El desarrollo integra el uso de bases de datos NoSQL, MongoDB y Neo4j, para alma
 
 ---
 
-## **Importación de Datos**
-Antes de ejecutar las consultas, importa los datos a las bases de datos:
+## **Antes de ejecutar las consultas**
+Es necesario importar los .csv necesarios, al igual que preparar índices:
 
-1. Ejecuta el script de importación para **MongoDB**:
+1. Ejecutar el script de importación para **MongoDB**:
    ```bash
    python3 ./importMongoDB.py
    ```
 
-2. Ejecuta el script de importación para **Neo4j**:
+2. Ejecutar el script de importación para **Neo4j**:
    ```bash
    python3 ./importNeo4j.py
+   ```
+   
+3. Ejecutar el script de índices **Neo4j**:
+   ```bash
+   python3 ./CreateIndexes.py
    ```
 
 ---
